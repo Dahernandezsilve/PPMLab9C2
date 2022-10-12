@@ -109,7 +109,20 @@
                 android:text="@{@string/subtotal_price(viewMod.price)}"/>
 
             <Button
+                android:id="@+id/cancel_button"
+                android:onClick="@{() -> flavorfragment.cancelOrder()}"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_marginEnd="@dimen/side_margin"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/cancel"
+                app:layout_constraintEnd_toStartOf="@id/next_button"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/next_button" />
+
+            <Button
                 android:id="@+id/next_button"
+                app:layout_constraintStart_toEndOf="@id/cancel_button"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/side_margin"
